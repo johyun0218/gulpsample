@@ -1,0 +1,531 @@
+  <!-- body -->
+	<div id="body">
+		<div class="bg">
+			
+			<!-- list -->
+			<div class="mList1 typeView">
+				<!-- forWeb -->
+				<div class="forWeb" cg-busy="{promise:vm.InfoPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+					<ul class="rNewsFeed">
+					<!-- set -->
+					<li>
+						<div class="con">
+							<div class="profile">
+								<a href="###" class="im">
+									<span class="i"><img src="{{::vm.showcaseInfo.author.profile_photo.thumbnail.url}}" width="44" height="44" alt=""></span>
+									<span class="t">{{::vm.showcaseInfo.author.username}}</span>
+								</a>
+								<span class="date" am-time-ago="::vm.showcaseInfo.published_at | amUtc | amDateFormat:'YYYY-MM-DDTHH:mm:ss'"></span>
+							</div>
+							<div class="img">
+								<a href="###"><img src="{{::vm.showcaseInfo.standard_resolution.url}}" width="580" height="580" alt=""></a>
+							</div>
+							<!-- txt -->
+							<div class="txt">
+								<div class="acc">
+									<div class="gLeft">
+										<span class="ls"><a href="###" class="i1"></a></span>
+										<span class="ls">
+											<a href="###" class="i2 jsBtnUtil">util</a>
+											<!-- layer -->
+											<div class="lDelete type2">
+												<span class="iArr lt"></span>
+												<a href="###" class="gray fcPink">Delete</a>
+												<a href="###" class="gray2">Share</a>
+												<a href="###" class="gray">Copy link to Showcase</a>
+												<a href="###" class="gray">Open in Browser</a>
+												<a href="###" class="jsBtnCancel">Cancel</a>
+											</div>
+											<!-- //layer -->
+										</span>
+									</div>
+									<div class="gRight">
+										<a href="###">{{vm.showcaseInfo.envies.count}} envied</a>
+										<span class="bar">|</span>
+										<a href="###">{{vm.showcaseInfo.comments.count}} comments</a>
+									</div>
+								</div>
+								<div class="desc" ng-bind-html="vm.showcaseInfo.photo_caption.elements[0].value | newlines"></div>
+								<div class="tag">
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a><br>
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a>
+								</div>
+								<!-- reply -->
+								<div class="mReply">
+
+                  <form class="thing-form">
+									<!-- input -->
+									<fieldset class="mInput">
+										<legend>Reply</legend>
+										<input type="text" class="keyword" on-enter="vm.addComment()" title="Any charming words?" placeholder="Any charming words?" required ng-model="vm.newComment">
+										<a hrer class="btn" ng-click="vm.addComment()">Post</a>
+									</fieldset>
+									<!-- //input -->
+                  </form>
+									<!-- lst -->
+									<div class="lst" cg-busy="{promise:vm.CommentPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+										<ul>
+                      <!--<ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="comment in vm.commentList">
+                        <li><a href="#" uib-tooltip="{{comment.author.username}}">{{comment.comment_text.elements[0].value}}
+                            <button type="button" class="close" ng-show="comment.author.id === vm.currentUser._id" ng-click="vm.deleteComment(comment)">&times;</button>
+                            </a></li>
+                      </ul>-->
+										<li ng-repeat="comment in vm.commentList">
+											<div class="im"><img src="{{comment.author.profile_photo.thumbnail.url}}" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">{{comment.author.username}}</span>
+												<span class="d" am-time-ago="comment.commented_at | amUtc | amDateFormat:'YYYY-MM-DDTHH:mm:ss'">3m ago</span>
+												<p>{{comment.comment_text.elements[0].value}}</p>
+											</div>
+											<div class="rt" ng-show="comment.author.id === vm.currentUser._id">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href class="gray fcPink" ng-click="vm.deleteComment(comment)">Delete</a>
+													<a href class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										</ul>
+									</div>
+									<!-- //lst -->
+								</div>
+								<!-- //reply -->
+							</div>
+							<!-- //txt -->
+						</div>
+					</li>
+					<!-- //set -->
+					</ul>
+					
+				</div>
+				<!-- //forWeb -->
+				<!-- forMobile -->
+				<div class="forMobile">
+					<ul>
+					<!-- set -->
+					<li>
+						<div class="con">
+							<div class="profile">
+								<a href="###" class="im">
+									<span class="i"><img src="images/img_profile.png" width="48" height="48" alt=""></span>
+									<span class="t">Ariana Grande</span>
+								</a>
+								<span class="date">3m ago</span>
+							</div>
+							<div class="img">
+								<a href="###"><img src="images/img_list2.png" width="580" height="580" alt=""></a>
+							</div>
+							<!-- txt -->
+							<div class="txt">
+								<div class="acc">
+									<div class="gLeft">
+										<span class="ls"><a href="###" class="i1"></a></span>
+										<span class="ls">
+											<a href="###" class="i2 jsBtnUtil">util</a>
+											<!-- layer -->
+											<div class="lDelete type2">
+												<span class="iArr lt"></span>
+												<a href="###" class="gray fcPink">Delete</a>
+												<a href="###" class="gray">Share</a>
+												<a href="###" class="gray">Copy link to Showcase</a>
+												<a href="###" class="gray">Open in Browser</a>
+												<a href="###" class="jsBtnCancel">Cancel</a>
+											</div>
+											<!-- //layer -->
+										</span>
+									</div>
+									<div class="gRight">
+										<a href="###">32 envied</a>
+										<span class="bar">|</span>
+										<a href="###">3 comments</a>
+									</div>
+								</div>
+								<div class="desc">Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design.Style mine with everything frome jeans to tailored pants. favorite design.</div>
+								<div class="tag">
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a><br>
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a>
+								</div>
+								<!-- reply -->
+								<div class="mReply">
+									<!-- input -->
+									<fieldset class="mInput">
+										<legend>Reply</legend>
+										<input type="text" class="keyword" title="Any charming words?" placeholder="Any charming words?">
+										<a href="###" class="btn">Post</a>
+									</fieldset>
+									<!-- //input -->
+									<!-- lst -->
+									<div class="lst">
+										<ul>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>Love this!!<br> Style mine wih everthing frome jeans to tailored pants, Favorite design, Simple classic.</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										</ul>
+									</div>
+									<!-- //lst -->
+								</div>
+								<!-- //reply -->
+							</div>
+							<!-- //txt -->
+						</div>
+					</li>
+					<!-- //set -->
+					<!-- set -->
+					<li>
+						<div class="con">
+							<div class="profile">
+								<a href="###" class="im">
+									<span class="i"><img src="images/img_profile.png" width="48" height="48" alt=""></span>
+									<span class="t">Ariana Grande</span>
+								</a>
+								<span class="date">3m ago</span>
+							</div>
+							<div class="img">
+								<a href="###"><img src="images/img_list2.png" width="580" height="580" alt=""></a>
+							</div>
+							<!-- txt -->
+							<div class="txt">
+								<div class="acc">
+									<div class="gLeft">
+										<span class="ls"><a href="###" class="i1"></a></span>
+										<span class="ls">
+											<a href="###" class="i2 jsBtnUtil">util</a>
+											<!-- layer -->
+											<div class="lDelete type2">
+												<span class="iArr lt"></span>
+												<a href="###" class="gray fcPink">Delete</a>
+												<a href="###" class="gray">Share</a>
+												<a href="###" class="gray">Copy link to Showcase</a>
+												<a href="###" class="gray">Open in Browser</a>
+												<a href="###" class="jsBtnCancel">Cancel</a>
+											</div>
+											<!-- //layer -->
+										</span>
+									</div>
+									<div class="gRight">
+										<a href="###">32 envied</a>
+										<span class="bar">|</span>
+										<a href="###">3 comments</a>
+									</div>
+								</div>
+								<div class="desc">Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design.Style mine with everything frome jeans to tailored pants. favorite design.</div>
+								<div class="tag">
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a><br>
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a>
+								</div>
+								<!-- reply -->
+								<div class="mReply">
+                  <form class="thing-form">
+									<!-- input -->
+									<fieldset class="mInput">
+										<legend>Reply</legend>
+										<input type="text" class="keyword" title="Any charming words?" placeholder="Any charming words?" required ng-model="vm.newComment">
+										<a href class="btn" ng-click="vm.addComment()">Post</a>
+									</fieldset>
+									<!-- //input -->
+                  </form>
+									<!-- lst -->
+									<div class="lst">
+										<ul>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>Love this!!<br> Style mine wih everthing frome jeans to tailored pants, Favorite design, Simple classic.</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										</ul>
+									</div>
+									<!-- //lst -->
+								</div>
+								<!-- //reply -->
+							</div>
+							<!-- //txt -->
+						</div>
+					</li>
+					<!-- //set -->
+					<!-- set -->
+					<li>
+						<div class="con">
+							<div class="profile">
+								<a href="###" class="im">
+									<span class="i"><img src="images/img_profile.png" width="48" height="48" alt=""></span>
+									<span class="t">Ariana Grande</span>
+								</a>
+								<span class="date">3m ago</span>
+							</div>
+							<div class="img">
+								<a href="###"><img src="images/img_list2.png" width="580" height="580" alt=""></a>
+							</div>
+							<!-- txt -->
+							<div class="txt">
+								<div class="acc">
+									<div class="gLeft">
+										<span class="ls"><a href="###" class="i1"></a></span>
+										<span class="ls">
+											<a href="###" class="i2 jsBtnUtil">util</a>
+											<!-- layer -->
+											<div class="lDelete type2">
+												<span class="iArr lt"></span>
+												<a href="###" class="gray fcPink">Delete</a>
+												<a href="###" class="gray">Share</a>
+												<a href="###" class="gray">Copy link to Showcase</a>
+												<a href="###" class="gray">Open in Browser</a>
+												<a href="###" class="jsBtnCancel">Cancel</a>
+											</div>
+											<!-- //layer -->
+										</span>
+									</div>
+									<div class="gRight">
+										<a href="###">32 envied</a>
+										<span class="bar">|</span>
+										<a href="###">3 comments</a>
+									</div>
+								</div>
+								<div class="desc">Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design. Style mine with everything frome jeans to tailored pants. favorite design.Style mine with everything frome jeans to tailored pants. favorite design.</div>
+								<div class="tag">
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a><br>
+									<a href="###">#gucci</a>
+									<a href="###">#black</a>
+									<a href="###">#classic</a>
+								</div>
+								<!-- reply -->
+								<div class="mReply">
+									<!-- input -->
+									<fieldset class="mInput">
+										<legend>Reply</legend>
+										<input type="text" class="keyword" title="Any charming words?" placeholder="Any charming words?">
+										<a href="###" class="btn">Post</a>
+									</fieldset>
+									<!-- //input -->
+									<!-- lst -->
+									<div class="lst">
+										<ul>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>So Cooooooool</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										<li>
+											<div class="im"><img src="images/img_profile.png" width="38" height="38" alt=""></div>
+											<div class="tx">
+												<span class="t">Ariana Grande</span>
+												<span class="d">3m ago</span>
+												<p>Love this!!<br> Style mine wih everthing frome jeans to tailored pants, Favorite design, Simple classic.</p>
+											</div>
+											<div class="rt">
+												<a href="###" class="iDelete jsBtnDelete">Delete</a>
+												<!-- layer -->
+												<div class="lDelete">
+													<span class="iArr"></span>
+													<a href="###" class="gray fcPink">Delete</a>
+													<a href="###" class="jsBtnCancel">Cancel</a>
+												</div>
+												<!-- //layer -->
+											</div>
+										</li>
+										</ul>
+									</div>
+									<!-- //lst -->
+								</div>
+								<!-- //reply -->
+							</div>
+							<!-- //txt -->
+						</div>
+					</li>
+					<!-- //set -->
+					</ul>
+				</div>
+				<!-- //forMobile -->
+			</div>
+			<!-- //list -->
+			
+
+		</div>
+	</div>
+	<!-- //body -->
+<!--<div cg-busy="{promise:vm.InfoPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+<pre>
+username : <a href="showroom/85745111-af75-4696-9a17-7dbf374bd17a">{{ vm.showcaseInfo.author.username}}</a>
+
+<img src="{{vm.showcaseInfo.standard_resolution.url}}" width="200" height="200" />
+envies : {{ vm.showcaseInfo.envies.count}}
+comments : {{ vm.showcaseInfo.envies.comments}}
+tags
+<div ng-repeat="tag in vm.showcaseInfo.tags.data">
+  id : {{tag.id}}
+  content : {{ tag.simple_purchase.content.product_name.value}}
+  merchant : {{ tag.simple_purchase.content.merchant.value}}
+  paid_price : {{ tag.simple_purchase.content.paid_price.value}}
+</pre>
+</div>
+
+<div cg-busy="{promise:vm.CommentPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+  <div class="container">
+  <div class="row">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="comment in vm.commentList">
+          <li><a href="#" uib-tooltip="{{comment.author.username}}">{{comment.comment_text.elements[0].value}}
+              <button type="button" class="close" ng-show="comment.author.id === vm.currentUser._id" ng-click="vm.deleteComment(comment)">&times;</button>
+              </a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="help-block">{{ vm.errors.delcomment }}</p>
+  </div>
+</div>
+  <form class="thing-form">
+    <label>comments</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new comment here." required ng-model="vm.newComment">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" on-enter="vm.addComment()" ng-click="vm.addComment()">Add New</button>
+      </span>
+    </p>
+  </form>-->

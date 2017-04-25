@@ -1,0 +1,45 @@
+  <!-- body -->
+	<div id="body">
+		<div class="bg">
+			<!-- module -->
+			<div class="mNotify">
+				<h3>Notifications</h3>
+				<div class="list" cg-busy="{promise:vm.notiPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+					<div class="indicator">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul>
+					<li ng-repeat="noti in vm.notiList">
+						<div class="im"><a href="/showroom/{{ noti.related_users.data[0].id }}"><img src="{{ noti.related_users.data[0].profile_photo.thumbnail.url}}" width="32" height="32" alt=""></a></div>
+						<div class="tx">
+							<p>{{ noti.message.elements[0].value}}</p>
+							<span class="d" am-time-ago="noti.last_updated_at | amUtc | amDateFormat:'YYYY-MM-DDTHH:mm:ss'" title="{{noti.last_updated_at}}"></span>
+						</div>
+						<div class="rt"><img src="images/x_notification1.png" width="40" height="40" alt=""></div>
+					</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //module -->
+			
+
+		</div>
+	</div>
+	<!-- //body -->
+
+
+<!--<div >
+  <div class="container">
+  <div class="row">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="noti in vm.notiList">
+          <li>message: {{ noti.message.elements[0].value}}, is_read: {{ noti.is_read }}</li>
+        </ul>
+      </div>
+    </div>
+    <p class="help-block">{{ vm.errors.delcomment }}</p>
+  </div>
+</div>-->

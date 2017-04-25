@@ -1,0 +1,38 @@
+
+<pre>
+  {{ vm.me | json}}
+</pre>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1></h1>
+    </div>
+    <div class="col-sm-12">
+      <form class="form" name="form" novalidate>
+
+        username : 
+
+        <input type="text" name="username" ng-model="vm.me.user.username" />
+        <button class="btn btn-lg btn-primary" type="button" ng-click="vm.changeUserName(form)">Change</button>
+        <p class="help-block" ng-show="form.username.$error.mongoose">
+            {{ vm.errors.other }}
+        </p>
+        <br />
+        Update Profile Photo
+        <div class="button" ngf-select="vm.uploadProfile($file)">Upload on file select</div>
+        <p class="help-block" ng-show="form.profile.$error.mongoose">
+            {{ vm.errors.other }}
+        </p>
+
+        <br />
+        <button class="btn btn-lg btn-primary" type="button" ng-click="vm.inviteFacebook()">Facebook My Friends</button>
+        <!--<input type="file" name="profile_photo" ng-model="vm.me.user.profile_photo" />
+        <button class="btn btn-lg btn-primary" type="button" ng-click="vm.changeUserName(form)">Change</button>-->
+
+        <p class="help-block"> {{ vm.message }} </p>
+
+        <!--<button class="btn btn-lg btn-primary" type="submit">Save changes</button>-->
+      </form>
+    </div>
+  </div>
+</div>

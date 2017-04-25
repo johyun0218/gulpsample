@@ -1,0 +1,108 @@
+  <!-- body -->
+	<div id="body">
+		<div class="bg">
+			
+
+			<!-- module -->
+			<div class="mSList">
+				<h3>Search</h3>
+				<div class="box">
+					
+					<!-- search -->
+					<fieldset class="mSearch2">
+						<legend>Search</legend>
+						<span class="itBg">
+							<input type="text" class="keyword" title="Search envicase" placeholder="Search envicase" ng-model="vm.q" on-enter="vm.search()">
+							<a href="###" class="delete">Delete</a>
+						</span>
+						<a href="###" class="bt">Cancel</a>
+					</fieldset>
+					<!-- //search -->
+					
+					<!-- tab -->
+					<div class="mTab1 jsTab1">
+						<ul>
+						<li class="selected"><a href="#jsSearchCon1">Items</a></li>
+						<li><a href="#jsSearchCon2">Users</a></li>
+						</ul>
+					</div>
+					<!-- //tab -->
+
+					<div class="tabCont">
+						<!-- Items -->
+						<div id="jsSearchCon1" class="cont">
+							<p class="txt" ng-show="vm.jsSearchCon1">Use brand, Product, and shop name,<br> to find the item you are looking for.<p>
+              <!-- list -->
+							<div class="mList3" cg-busy="{promise:vm.showcasePromise,templateUrl:'',message:'Please Wait...',backdrop:true,delay:0,minDuration:0}">
+								<ul>
+								<li ng-repeat='item in vm.showcaseList'>
+									<a href="###">
+										<span class="cover"><img src="/assets/images/img_list3_blank.png" alt=""></span> <!-- for mobile rate  -->
+										<span class="img"><img ng-src="{{ ::item.showcase.thumbnail.url}}" alt=""></span>
+									</a>
+								</li>
+								</ul>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- //Items -->
+						<!-- Users -->
+						<div id="jsSearchCon2" class="cont hidden">
+							<p class="txt" ng-show="vm.jsSearchCon2">Search celebrities, influncers, and others to<br> take a peek at their showrooms<p>
+              <!-- list2 -->
+							<div class="mList4">
+								<ul>
+								<li ng-repeat="user in vm.userList">
+									<span class="im"><img src="{{ user.user.profile_photo.thumbnail}}" width="36" height="36" alt="{{ user.user.username}}"></span>
+									<span class="tx">{{ user.user.username}}</span>
+									<span class="rt"><a href="###" ng-click="vm.changeFollow(user.user)" ng-class="vm.classFollow(user.user)">Follow</a></span>
+								</li>
+								<!--<li>
+									<span class="im"><img src="images/img_profile.png" width="36" height="36" alt="David Rheem"></span>
+									<span class="tx">David Rheem</span>
+									<span class="rt"><a href="###" class="iFollow selected">Follow</a></span>
+								</li>-->
+								</ul>
+							</div>
+							<!-- //list2 -->
+						</div>
+						<!-- //Users -->
+					</div>
+
+				</div>
+			</div>
+			<!-- //module -->
+			
+
+		</div>
+	</div>
+	<!-- //body -->
+
+  <!--<uib-tabset active="vm.tabActive">
+    <uib-tab index="0" heading="ShowCase" ng-click="vm.showTab('showcases')">
+      <div id="divShowcase" class="thumb_list_inner">
+      <ul>
+        <li id='showcase_{{$index}}' ng-repeat='item in vm.showcaseList'>
+          <h2></h2>
+          <p>
+            <a href="/showcase/ca004b1d-c763-4338-bce8-21c30a050ac3"><img bn-lazy-src="{{ ::item.showcase.thumbnail.url }}"/></a>
+          </p>
+        </li>
+      </ul>
+    </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Users" ng-click="vm.showTab('users')">
+      <div id="divUsers" class="thumb_list_inner">
+        <ul>
+          <li ng-repeat='item in vm.userList'>
+            <h2 id="anchor{{item.user.username}}">{{item.user.username}}</h2>
+            <p>
+              <a href="/case/{{item.user.username}}"><img ng-src="{{item.user.profile_photo.thumbnail.url}}" /></a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </uib-tab>
+  </uib-tabset>
+  -->
+  

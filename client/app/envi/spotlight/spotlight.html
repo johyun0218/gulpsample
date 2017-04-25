@@ -1,0 +1,27 @@
+today top 10
+<div cg-busy="{promise:vm.topPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+<div id="divShowcase" class="thumb_list_inner">
+  <ul>
+    <li id='showcase_{{$index}}' ng-repeat='item in vm.topList'>
+      <h2>{{ ::item.showcase.author.username }}</h2>
+      <p>
+        <a href="/showcase/{{ ::item.showcase.id }}"><img bn-lazy-src="{{ ::item.showcase.thumbnail.url }}"/></a>
+      </p>
+    </li>
+  </ul>
+</div>
+</div>
+
+editor's Pick
+<div cg-busy="{promise:vm.editorPromise,templateUrl:vm.templateUrl,message:vm.message,backdrop:vm.backdrop,delay:vm.delay,minDuration:vm.minDuration}">
+<div id="divShowcase" class="thumb_list_inner">
+  <ul>
+    <li id='showcase_{{$index}}' ng-repeat='item in vm.editorList'>
+      <h2>{{ ::item.showcase.author.username }}</h2>
+      <p>
+        <a href="/showcase/{{ ::item.showcase.id }}"><img bn-lazy-src="{{ ::item.showcase.thumbnail.url }}"/></a>
+      </p>
+    </li>
+  </ul>
+</div>
+</div>

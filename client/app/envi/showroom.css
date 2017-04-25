@@ -1,0 +1,20 @@
+.thumb_list_wrap {zoom:1;}
+.thumb_list_wrap .sorting_btn_list {text-align:center;}
+.thumb_list_inner {overflow:hidden;margin-top:15px;text-align:center;}
+.thumb_list_inner > ul {margin-top:-15px;font-size:0; /*overflow:hidden;margin-left:7px;*/}
+.thumb_list_inner > ul > li {overflow:hidden;position:relative;display:inline-block;*display:inline;/* float:left; */width:280px;height:280px;margin:15px 7px 0;background:#272727;border:1px solid #222;font-size:12px;text-align:left;zoom:1;}
+.thumb_list_inner > ul > li:hover {border:1px solid #f65151;}
+.thumb_list_inner > ul > li > a{display:inline-block;*display:inline;}
+.thumb_list_inner > ul > li .bg_over {display:inline-block;*display:inline;zoom:1;position:absolute;bottom:0;left:0;width:280px;height:72px;opacity : 0}
+
+.thumb_list_inner > ul > li .img img {display:inline-block;/*width:100%;*/height:280px;}
+.thumb_list_inner > ul > li .tit {position:absolute;bottom:42px;left:20px;display:inline-block;width:145px;line-height:16px;text-align:left;color:#fff;text-shadow:1px 1px #000;}
+.thumb_list_inner > ul > li .score {position:absolute;top:-19px;right:-2px;color:#ff7b7b;line-height:100%;text-shadow:1px 1px #000;font-size:24px;}
+.thumb_list_inner > ul > li .id a {color:#fff;line-height:100%;/*border-bottom:1px solid #fff;*/text-shadow:1px 1px #000;}
+.thumb_list_inner .thumb_info {position:absolute;bottom:20px;left:0;display:inline-block;*display:inline;zoom:1;margin:0 20px;width:240px;opacity : 0}
+/* 2016-10-05 이미지 없을경우 css */
+.thumb_list_inner > ul > li.none_img:hover {border:1px solid #222}
+.thumb_list_inner > ul > li.none_img a {display:none}
+.thumb_list_inner > ul > li.none_img div {display:none}
+.thumb_list_inner > ul > li.none_img span {display:none}
+.thumb_list_inner > ul > li.none_img {display:inline-block; text-align:center; line-height:282px; background-color:#292929;}

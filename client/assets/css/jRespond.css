@@ -1,0 +1,42 @@
+body{background-color:#474747;}
+
+#wrap{background-color:#fff;margin:0 auto;min-width:1024px;}
+#wrap .bg{position:relative;margin:0 auto;width:1024px;}
+
+#header{height:100px;}
+#header h1{margin:0;padding:9px 0 0 30px;}
+#header .gRt{position:absolute;top:0;right:30px;}
+#header .gRt .iLog{display:inline-block;}
+
+.mSearch{position:absolute;top:14px;left:165px;}
+.mSearch legend{display:none;}
+.mSearch .keyword{border:1px solid #b7b7b7;background:url(../images/ico_find.png) 16px 50% no-repeat;border-radius:3px;font-size:12px;padding:0 0 0 48px;width:524px;line-height:34px;height:34px;}
+
+.mGnb{margin:20px 0 0;text-align:center;}
+.mGnb ul{margin:0;padding:0;}
+.mGnb li{display:inline-block;margin:0 31px;padding:0;}
+.mGnb li a{color:#000;font-size:17px;letter-spacing:-0.3px;}
+
+.iLog{display:inline-block;margin:14px 0 0;}
+.iLog .img{display:inline-block;position:relative;border-radius:34px;margin-right:4px;width:34px;height:34px;vertical-align:middle;overflow:hidden;}
+.iLog .txt{display:inline-block;color:#000;font-size:17px;vertical-align:middle;line-height:34px;height:34px;}
+
+#body{background:url(../images/k_body.png) 0 0 repeat-x #f7f7f7;}
+#body .bg{padding:30px 45px;}
+
+.mLaw{color:#636363;}
+.mLaw h3{color:#000;font-size:19px;margin:0;padding:0 0 12px;}
+
+#footer{background-color:#474747;color:#f0f0f0;font-size:11px;padding:39px 0 35px;text-align:center;}
+#footer a{color:#f0f0f0;}
+#footer .con1 img{margin:0 7px;}
+#footer .con2{line-height:170%;margin:37px 0 0;}
+#footer .con3{margin:20px 0 0;}
+#footer .con3 img{margin:0 8px;}
+#footer .con4{margin:20px 0 0;}
+#footer .con4 a{margin:0 10px;}
+
+
+
+
+

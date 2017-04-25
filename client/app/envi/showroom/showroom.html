@@ -1,0 +1,29 @@
+
+<a href="/showroom/{{ vm.userInfo.id}}/followers">followers ({{ vm.userInfo.user.followers.count}})</a> | 
+<a href="/showroom/{{ vm.userInfo.id}}/followees">followees ({{ vm.userInfo.user.followees.count}})</a>
+
+<!--<pre>
+{{ vm.userInfo | json}}
+</pre>-->
+
+
+
+showcasesList
+<!--<pre>
+  {{ vm.showcasesList | json}}
+</pre>-->
+<div class="mNotify" cg-busy="{promise:vm.showcasesListPromise,templateUrl:'',message:'Please Wait...',backdrop:true,delay:0,minDuration:0}">
+  <ul>
+    <li ng-repeat='item in vm.showcasesList'>
+      <a href="/showcase/{{ ::item.id}}">
+        <span class="cover"><img src="/assets/images/img_list3_blank.png" alt=""></span> <!-- for mobile rate  -->
+        <span class="img"><img ng-src="{{ ::item.thumbnail.url}}" alt=""></span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+enviedInfo
+<pre>
+  {{ vm.enviedInfo | json}}
+</pre>

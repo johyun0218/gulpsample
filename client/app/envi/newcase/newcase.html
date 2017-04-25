@@ -1,0 +1,75 @@
+1. add picture
+<button type="button" class="btn btn-default" ng-click="vm.openShoppingItem()">Open me!</button>
+
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+      <ul>
+          <li ng-repeat="item in $ctrl.items">
+              <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+          </li>
+      </ul>
+      Selected: <b>{{ $ctrl.selected.item }}</b>
+  </div>
+  <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="stackedModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title-{{name}}">The {{name}} modal!</h3>
+    </div>
+    <div class="modal-body" id="modal-body-{{name}}">
+        Having multiple modals open at once is probably bad UX but it's technically possible.
+    </div>
+</script>
+
+<table border="1">
+<tr>
+    <td><ng-croppie   src="vm.inputImage"
+              ng-model='vm.outputImage'
+              boundry="{w: 400, h: 400}"
+              viewport="{w: 300, h: 300}"
+              targetbutton=".upload-result"
+              zoomslider="false"
+              orientation="true">
+        </ng-croppie>
+    </td>
+    <td>
+      <button class="upload-result">Result</button>
+      <div id="containment-wrapper" style='border:1px solid #000; width:300px;height:300px;position:relative;'>
+        <img ng-src="{{vm.outputImage}}" />
+        <div id='divPlus' ng-click="vm.plusTag($event)" class='draggable ui-widget-content' style='width:30px;height:30px;solid #000;text-align:center;vertical-align:middle;position:absolute;top:100px;left:100px;cursor:pointer;'>
+          +
+        </div>
+      </div>
+     
+    </td>
+</tr>
+</table>
+
+
+<pre>
+{{ vm.tagInfo | json }}
+</pre>
+
+<div ng-include="'app/envi/newcase/searchitem/searchitem.html'"></div>
+
+<!-- With options -->
+<!--<ng-croppie   src="vm.inputImage"
+              ng-model='vm.outputImage'
+              update='vm.onUpdate'
+              boundry="{w: 400, h: 400}"
+              viewport="{w: 300, h: 300}"
+              orientation="true"
+              rotation="90"
+              type="circle">
+</ng-croppie>-->
+
+
+
+<!-- Preview -->

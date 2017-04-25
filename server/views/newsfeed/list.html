@@ -1,0 +1,11 @@
+<% for(var i=0; i<data.length; i++) {%>
+   <li id="feed_<%= i %>">
+     <a href="/showcase/ca004b1d-c763-4338-bce8-21c30a050ac3">
+     <%= data[i].showcase.thumbnail.url %>
+			<!--<span class="img"><img src="<%= data[i].showcase.thumbnail.url %>" width="280px" height="280px" /></span>-->
+      
+		</a>
+    <font color='#fff'>id : <%= data[i].showcase.id %></font>
+    <a href="/otherCanon/myGalleryMain?createId=jbi92">1<%= data[i].showcase.author.username %></a>
+  </li>
+<% } %>

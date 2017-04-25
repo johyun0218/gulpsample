@@ -1,0 +1,73 @@
+<!--<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">envicase3</a>
+    </div>
+    <div uib-collapse="$ctrl.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in $ctrl.menu" ui-sref-active="active">
+            <a ui-sref="{{item.state}}">{{item.title}}</a>
+        </li>
+        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+      </ul>
+
+      <input type="search" name="search" placeholder="Search" ng-model="$ctrl.searchText" on-enter="$ctrl.search()" />
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ui-sref-active="active"><a ui-sref="feed">News Feed</a></li>
+        <li ui-sref-active="active"><a ui-sref="spotlight">Spotlight</a></li>
+        <li ui-sref-active="active"><a ui-sref="showroom">Showroom</a></li>
+        <li ui-sref-active="active"><a ui-sref="notification">Notification</a></li>
+        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
+        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+        <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p> </li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="$ctrl.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>-->
+  <div id="header">
+		<!-- uh -->
+		<div class="uh">
+			<div class="bg">
+				<h1><a href="/"><img src="/assets/images/logo.png" alt="envicase"></a></h1>
+				<!-- search -->
+				<fieldset class="mSearch">
+					<legend>Search envicase</legend>
+					<input type="search" class="keyword" title="Search envicase" placeholder="Search envicase" ng-model="$ctrl.searchText" on-enter="$ctrl.search()">
+				</fieldset>
+				<!-- //search -->
+				<!-- rightarea -->
+				<div class="gRt">
+          <a ui-sref="login" class="iLog ng-hide" ng-hide="$ctrl.isLoggedIn()">
+						<span class="img"><img src="/assets/images/ico_login.png" width="34" height="34" alt=""></span>
+						<span class="txt">Sign in</span>
+					</a>
+					<a href="###" ng-show="$ctrl.isLoggedIn()" class="iSearch">search</a>
+					<a href="###" ng-show="$ctrl.isLoggedIn()" class="iCamera">carema</a>
+					<a ui-sref="notification" ng-show="$ctrl.isLoggedIn()" class="iClock">clock <span class="iDot"></span></a>
+					<a ui-sref="settings" ng-show="$ctrl.isLoggedIn()" class="iProfile"><img src="/assets/images/img_profile.png" width="34" height="34" alt=""></a>
+					<a ui-sref="logout">Logout</a>
+				</div>
+				<!-- //rightarea -->
+			</div>
+		</div>
+		<!-- //uh -->
+
+		<!-- gnb -->
+		<div class="mGnb">
+			<ul>
+			<li ui-sref-active="selected"><a ui-sref="feed">News Feed</a></li>
+			<li ui-sref-active="selected"><a ui-sref="spotlight">Spotlight</a></li>
+			<li ui-sref-active="selected"><a ui-sref="showroom">Showroom</a></li>
+			</ul>
+		</div>
+		<!-- //gnb -->
+	</div>

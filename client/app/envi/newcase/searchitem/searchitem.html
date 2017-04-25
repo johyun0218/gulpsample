@@ -1,0 +1,56 @@
+<script type="text/ng-template" id="searchitem.html">
+vm : {{ this }}
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Item Search</h3>
+</div>
+<input type="search" name="search" placeholder="Search" ng-model="vm.searchText" on-enter="vm.search()" />
+
+<div class="modal-body"  ng-show="vm.step==1">
+    <ul>
+        <li ng-repeat="item in vm.itemList">
+            <a href="#" ng-click="vm.selectItem(item)">{{ item }}</a>
+        </li>
+    </ul>
+</div>
+<div class="modal-body" ng-show="vm.step==2">
+    step 2
+    <table border="1">
+        <tr>
+            <th>Brand</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.brand" /></td>
+        </tr>
+        <tr>
+            <th>Product</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.product" /></td>
+        </tr>
+        <tr>
+            <th>Shop</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.shop" /></td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.price" /></td>
+        </tr>
+        <tr>
+            <th>URL</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.url" /></td>
+        </tr>
+        <tr>
+            <th>Your purchase price</th>
+            <td><input type="text" name="brand" ng-model="vm.shopTagInfo.purchase" /></td>
+        </tr>
+        <tr>
+            <th>#Tag</th>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<pre>
+{{ vm.shopTagInfo | json }}
+</pre>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="vm.cancel()">Cancel</button>
+</div>
+
+</script>

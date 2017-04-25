@@ -1,0 +1,75 @@
+  <!-- body -->
+	<div id="body">
+		<div class="bg">
+			
+
+      <div class="mNotify" cg-busy="{promise:vm.feedPromise,templateUrl:'',message:'Please Wait...',backdrop:true,delay:0,minDuration:0}">
+			<!-- module -->
+			<div class="mText2" class="ng-hide" ng-hide="vm.isFeedBlank">
+				<h3>You aren't following anyone.</h3>
+				<p class="txt">Find friends and follow them to take a peek  at their purchases.</p>
+				<div class="img"><a href ng-click="vm.newcase()"><img src="/assets/images/ico_people1.png" alt=""></a></div>
+			</div>
+      </div>
+			<!-- //module -->
+			
+
+		</div>
+	</div>
+	<!-- //body -->
+
+<!--<pre>{{vm.awesomeNewsFeeds | json}}</pre>-->
+
+
+<!--<div class="thumb_list_inner">
+  <ul>
+  </ul>
+</div>-->
+
+<!--
+<div class="container">
+
+  <div class="thumb_list_inner">
+    <ul ng-repeat='item in vm.awesomeNewsFeeds'>
+      <li>
+        <h2 id="anchor{{item.showcase.id}}">{{item.author.username}}</h2>
+        <p>
+          <a href="/case/{{item.showcase.id}}"><img ng-src="{{item.showcase.thumbnail.url}}" width="280" height="280" /></a>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div ng-repeat='item in ::vm.products'>
+      <div class="col-md-3">
+        <h2 id="anchor{{::item.seq}}">cash:{{::item.seq}}</h2>
+        <p>
+          <a href="/case/{{::item.seq}}"><img ng-src="{{::item.url}}" width="280" height="280" /></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div infinite-scroll='vm.scroll.nextPage()' infinite-scroll-disabled='vm.scroll.busy' infinite-scroll-distance='1'>
+    <ul>
+        <li ng-repeat='item in vm.scroll.items' repeat-done="vm.layoutDone()">
+            <a href="#" >
+              <span class="img"><img ng-src="{{::item.url}}" width="280" height="280" /></span> 
+              <p class="bg_over"><span class="tit txt_overflow">광양매화마을의 일출</span></p>
+            </a>
+            <div class="thumb_info">
+              <span class="score">99.9</span>
+              <span class="id"><a href="/otherCanon/myGalleryMain?createId=sacw1052">sacw1052</a></span>
+            </div>
+            <div class="sns_share">
+              <a href="javascript:snsShare('facebook' ,'236781' ,'/pds/gallery/gl_1490354597872_EKcLol6ovT.jpg' , '광양매화마을의 일출');"><span>페이스북</span></a>
+              <a href="javascript:snsShare('twitter'  ,'236781' ,'/pds/gallery/gl_1490354597872_EKcLol6ovT.jpg' , '광양매화마을의 일출');" class="tw"><span>트위터</span></a>
+              <a href="javascript:snsShare('pinterest','236781' ,'/pds/gallery/gl_1490354597872_EKcLol6ovT.jpg' , '광양매화마을의 일출');" class="pl"><span>핀터레스트</span></a>
+            </div>
+          </li>
+    </ul>
+    <div ng-show='vm.scroll.busy'>Loading data...</div>
+  </div>
+</div>
+<br /><br />
+<br /><br />
+<br /><br />-->
